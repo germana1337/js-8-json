@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #afc3ed;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-main {
+    background-color: #1c0202 ;
+    border-bottom: 1px solid rgba(51, 51, 51, .25);
+    font-family: "FF Mark W05", Arial, sans-serif;
+    font-size: 12px !important;
+    font-weight: bold;
+    height: 76px;
+    line-height: normal;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    z-index: 3000000;
+  }
+  
+  .burgBar {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+    height: 40px;
+    width: 44px;
+  }
+  
+  .line {
+    width: 84%;
+    height: 2px;
+    background-color: #f5f5f5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+    z-index: 1;
+  }
+  
+  .line1 {
+    top: 30%;
+  }
+  
+  .line3 {
+    top: 70%;
+  }
+  
+  .navbar li {
+    padding: 30px;
+    text-align: center;
+    margin-right: 4px;
+  }
+  
+  
+  .ul-style {
+    display: flex;
+  }
+  
+  .navbar li a {
+    color: #f5f5f5;
+    text-transform: uppercase;
+    
+  }
+  
+  .navbar li a:hover {
+    color: #bb4545;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  
+  .header-main a {
+    color: #f5f5f5;
+    font-size: 18px;
+  }
+  
+  
+  /* ////////////////RESPONSIVE-CSS FOR BURGER ////////////// */
+  
+  @media(max-width:768px) {
+    .navbar {
+      display: none;
+    }
+  
+    .burgBar {
+      display: block;
+  
+    }
+  .header-main {
+    background-color: #171717;
+  }
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #38c4dd;
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+      z-index: 1;
+    }
+
+  
+    .side-menu.active {
+      transform: translateX(0);
+    }
+  
+    .side-menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .side-menu li {
+        padding-top: 40px;
+      margin-top: 40px;
+    }
+  
+    .header-main {
+      flex-direction: column;
+    }
+  
+    .navbar.visible {
+      display: block;
+    }
+  
+  
+    .activeBurgerBar .line1 {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  
+    .activeBurgerBar .line2 {
+      display: none;
+    }
+  
+    .activeBurgerBar .line3 {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  
+  
+    .ul-style {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding-top: 50px;
+      margin-top: 200px;
+    }
+  
+    .ul-style a {
+      color: #171717;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  
+    .ul-style a:hover {
+      color: #cc491d;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+}
